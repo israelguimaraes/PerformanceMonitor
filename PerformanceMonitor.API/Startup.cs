@@ -1,24 +1,21 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using PerformanceMonitor.API.Domain.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace PerformanceMonitor.API
 {
     public class Startup
     {
+        private int _processId;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            _processId = Process.GetCurrentProcess().Id;
         }
 
         public IConfiguration Configuration { get; }
@@ -49,6 +46,24 @@ namespace PerformanceMonitor.API
             {
                 endpoints.MapControllers();
             });
+
+            InitializePerformanceMonitor();
+        }
+
+        private void InitializePerformanceMonitor()
+        {
+            InitializeMonitor();
+            InitializeCollector();
+        }
+
+        private void InitializeMonitor()
+        {
+            Process.Start(@"dotnet-counters.exe", @$"monitor --refresh-interval 1 -p {_processId}");
+        }
+
+        private void InitializeCollector()
+        {
+            Process.Start(@"dotnet-counters.exe", @$"collect --process-id {_processId} --refresh-interval 1 --format json");
         }
     }
 }
