@@ -25,7 +25,8 @@ namespace PerformanceMonitor.API
         {
             services.AddControllers();
 
-            services.AddScoped<IUserRepository, FakeUserRepository>();
+            //services.AddScoped<IUserRepository, BogusFakeUserRepository>();
+            services.AddScoped<IUserRepository, ManualFakeUserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,7 +64,7 @@ namespace PerformanceMonitor.API
 
         private void InitializeCollector()
         {
-            Process.Start(@"dotnet-counters.exe", @$"collect --process-id {_processId} --refresh-interval 1 --format json");
+            //Process.Start(@"dotnet-counters.exe", @$"collect --process-id {_processId} --refresh-interval 1 --format json");
         }
     }
 }

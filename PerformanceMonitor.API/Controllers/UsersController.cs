@@ -18,20 +18,24 @@ namespace PerformanceMonitor.API.Controllers
             _userRepository = userRepository;
         }
 
+        [HttpGet("home")]
+        public IActionResult Home()
+        {
+            return Ok("Home");
+        }
+
         [HttpGet("")]
-        public async Task<IActionResult> GetAll()
+        public IActionResult Generate()
         {
             var time = Stopwatch.StartNew();
 
-            var users = await _userRepository.GetAll();
-
-            var result = users.ToList();
+            var users = _userRepository.GetAll().Result;
 
             time.Stop();
 
             return Ok(new
             {
-                UsersCount = result.Count(),
+                UsersCount = users.Count(),
                 TotalSeconds = time.ElapsedMilliseconds,
             });
         }
