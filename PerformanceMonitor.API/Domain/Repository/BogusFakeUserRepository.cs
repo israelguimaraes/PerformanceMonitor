@@ -5,13 +5,11 @@ using System.Threading.Tasks;
 
 namespace PerformanceMonitor.API.Domain.Repository
 {
-    public class FakeUserRepository : IUserRepository
+    public class BogusFakeUserRepository : IUserRepository
     {
-        private const int Count = 300_000;
-
-        public Task<IEnumerable<User>> GetAll()
+        public Task<IEnumerable<User>> GetAll(int count)
         {
-            var users = FakeUserGenerator.FakeData().Generate(Count);
+            var users = FakeUserGenerator.FakeData().Generate(count);
 
             return Task.FromResult(users.AsEnumerable());
         }

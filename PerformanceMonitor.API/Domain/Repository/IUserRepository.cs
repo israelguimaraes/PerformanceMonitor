@@ -5,6 +5,6 @@ namespace PerformanceMonitor.API.Domain.Repository
 {
     public interface IUserRepository
     {
-        Task<IEnumerable<User>> GetAll();
+        Task<IEnumerable<User>> GetAll(int count);
     }
 }
