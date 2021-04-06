@@ -22,7 +22,7 @@ namespace PerformanceMonitor.API
         {
             services.AddControllers();
 
-            services.AddScoped<IUserRepository, FakeUserRepository>();
+            services.AddScoped<IUserRepository, ManualFakeUserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

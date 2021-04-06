@@ -29,11 +29,12 @@ namespace PerformanceMonitor.API.Services
             //"threadpool-completed-items-count",
             //"active-timer-count",
         };
+        private static Process _collectorProcess;
 
         public static void InitializePerformanceMonitor()
         {
             InitializeMonitor();
-            InitializeCollector();
+            //InitializeCollector();
         }
 
         private static void InitializeMonitor()
@@ -44,16 +45,19 @@ namespace PerformanceMonitor.API.Services
 
             if (process == null || process.HasExited)
                 throw new InvalidOperationException("Error - dotnet-counters MONITOR");
-
-            Console.WriteLine($"MONITOR - PID: {ProcessID}");
         }
 
-        private static void InitializeCollector()
+        public static void InitializeCollector()
         {
-            var process = Process.Start(@"dotnet-counters.exe", @$"collect --process-id {ProcessID} --refresh-interval 1 --format json");
+            _collectorProcess = Process.Start(@"dotnet-counters.exe", @$"collect --process-id {ProcessID} --refresh-interval 1 --format json");
 
-            if (process == null || process.HasExited)
+            if (_collectorProcess == null || _collectorProcess.HasExited)
                 throw new InvalidOperationException("Error - dotnet-counters COLLECT");
+        }
+
+        public static void StopCollector()
+        {
+            _collectorProcess.Kill();
         }
     }
 }

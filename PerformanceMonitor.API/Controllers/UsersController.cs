@@ -37,18 +37,19 @@ namespace PerformanceMonitor.API.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetAll()
         {
+            DotnetMonitor.InitializeCollector();
+
             var time = Stopwatch.StartNew();
-
             var users = _userRepository.GetAll(Count).Result;
-
             var dtos = Map(users);
-
             time.Stop();
+
+            DotnetMonitor.StopCollector();
 
             return Ok(new
             {
                 UsersCount = dtos.Count(),
-                TotalSeconds = TimeSpan.FromMilliseconds(time.ElapsedMilliseconds).Seconds,
+                TotalSeconds = TimeSpan.FromMilliseconds(time.ElapsedMilliseconds).TotalSeconds,
                 DotnetMonitor.ProcessID
             });
         }
