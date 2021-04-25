@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceMonitor.API", "PerformanceMonitor.API\PerformanceMonitor.API.csproj", "{A35D1531-1EB0-4AF6-A007-6E7C9B2C66F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceMonitor.Console.AutoMapper", "PerformanceMonitor.Console.AutoMapper\PerformanceMonitor.Console.AutoMapper.csproj", "{107EA066-DAF7-4FB4-B820-D6A2E62A7BD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceMonitor.Console.AutoMapper", "PerformanceMonitor.Console.AutoMapper\PerformanceMonitor.Console.AutoMapper.csproj", "{107EA066-DAF7-4FB4-B820-D6A2E62A7BD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceMonitor.Console.Manual", "PerformanceMonitor.Console.Manual\PerformanceMonitor.Console.Manual.csproj", "{B5FAC58E-E1EA-4086-94A9-ECF2F7798A35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceMonitor.Console.Manual", "PerformanceMonitor.Console.Manual\PerformanceMonitor.Console.Manual.csproj", "{B5FAC58E-E1EA-4086-94A9-ECF2F7798A35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceMonitor.Console.Mapster", "PerformanceMonitor.Console.Mapster\PerformanceMonitor.Console.Mapster.csproj", "{83BE461A-FC70-4994-892B-702189D3E1C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceMonitor.Console.Mapster", "PerformanceMonitor.Console.Mapster\PerformanceMonitor.Console.Mapster.csproj", "{83BE461A-FC70-4994-892B-702189D3E1C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{4123F967-3A1E-4F3C-BB3F-45BDDCC3756E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0ABF0C79-8350-4043-99F1-0AE400008B03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A35D1531-1EB0-4AF6-A007-6E7C9B2C66F4} = {4123F967-3A1E-4F3C-BB3F-45BDDCC3756E}
+		{107EA066-DAF7-4FB4-B820-D6A2E62A7BD3} = {0ABF0C79-8350-4043-99F1-0AE400008B03}
+		{B5FAC58E-E1EA-4086-94A9-ECF2F7798A35} = {0ABF0C79-8350-4043-99F1-0AE400008B03}
+		{83BE461A-FC70-4994-892B-702189D3E1C6} = {0ABF0C79-8350-4043-99F1-0AE400008B03}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5624C85B-9ED2-4D2F-904E-B1DDDD28BD99}
