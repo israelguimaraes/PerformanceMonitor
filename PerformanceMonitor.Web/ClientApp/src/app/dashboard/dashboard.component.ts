@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Inject, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
 @Component({
@@ -7,6 +8,9 @@ import * as Highcharts from 'highcharts';
     styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+    performanceData: PerformanceData;
+    updateFlag = false;
 
     highcharts = Highcharts;
     chartOptions = {
@@ -20,8 +24,7 @@ export class DashboardComponent implements OnInit {
             text: "Informations from dotnet-counters monitor"
         },
         xAxis: {
-            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+            categories: []
         },
         yAxis: {
             title: {
@@ -34,14 +37,36 @@ export class DashboardComponent implements OnInit {
         series: [
             {
                 name: 'CPU',
-                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                data: []
             }
         ]
     };
 
-    constructor() { }
+    constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
+        this.http.get<PerformanceData>(this.baseUrl + 'dashboard').subscribe(result => {
+            this.performanceData = result;
+            this.chartOptions.xAxis.categories = result.cpu.map(c => c.timestamp.toString());
+            this.chartOptions.series[0].data = result.cpu.map(c => c.percentage);
+            this.updateFlag = true;
+        })
+     }
 
     ngOnInit() {
+        
     }
+}
 
+interface PerformanceData {
+    cpu: CpuUsage[];
+    workingSet: WorkingSet[];
+}
+
+interface CpuUsage {
+    timestamp: Date;
+    percentage: number;
+}
+
+interface WorkingSet {
+    timestamp: Date;
+    mb: number;
 }
