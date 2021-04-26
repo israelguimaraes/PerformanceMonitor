@@ -34,30 +34,30 @@ namespace PerformanceMonitor.API.Services
         public static void InitializePerformanceMonitor()
         {
             InitializeMonitor();
-            //InitializeCollector();
+            InitializeCollector();
         }
 
         private static void InitializeMonitor()
         {
-            var counters = string.Join(',', _countersTypes);
+            //var counters = string.Join(',', _countersTypes);
 
-            var process = Process.Start(@"dotnet-counters.exe", @$"monitor --process-id {ProcessID} --refresh-interval 1 --counters System.Runtime[{counters}]");
+            //var process = Process.Start(@"dotnet-counters.exe", @$"monitor --process-id {ProcessID} --refresh-interval 1 --counters System.Runtime[{counters}]");
 
-            if (process == null || process.HasExited)
-                throw new InvalidOperationException("Error - dotnet-counters MONITOR");
+            //if (process == null || process.HasExited)
+            //    throw new InvalidOperationException("Error - dotnet-counters MONITOR");
         }
 
         public static void InitializeCollector()
         {
-            _collectorProcess = Process.Start(@"dotnet-counters.exe", @$"collect --process-id {ProcessID} --refresh-interval 1 --format json");
+            //_collectorProcess = Process.Start(@"dotnet-counters.exe", @$"collect --process-id {ProcessID} --refresh-interval 1 --format json");
 
-            if (_collectorProcess == null || _collectorProcess.HasExited)
-                throw new InvalidOperationException("Error - dotnet-counters COLLECT");
+            //if (_collectorProcess == null || _collectorProcess.HasExited)
+            //    throw new InvalidOperationException("Error - dotnet-counters COLLECT");
         }
 
         public static void StopCollector()
         {
-            _collectorProcess.Kill();
+            //_collectorProcess.Kill();
         }
     }
 }

@@ -1,0 +1,508 @@
+{
+	"TargetProcess": "PerformanceMonitor.API",
+	"StartTime": "25/04/2021 19:47:01",
+	"Events": [{
+		"timestamp": "2021-04-25 19:47:03Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:04Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 60
+	},
+	{
+		"timestamp": "2021-04-25 19:47:04Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 3
+	},
+	{
+		"timestamp": "2021-04-25 19:47:04Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:05Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 60
+	},
+	{
+		"timestamp": "2021-04-25 19:47:05Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 3
+	},
+	{
+		"timestamp": "2021-04-25 19:47:05Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:06Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 60
+	},
+	{
+		"timestamp": "2021-04-25 19:47:06Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 3
+	},
+	{
+		"timestamp": "2021-04-25 19:47:06Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:07Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 60
+	},
+	{
+		"timestamp": "2021-04-25 19:47:07Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 3
+	},
+	{
+		"timestamp": "2021-04-25 19:47:07Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:08Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 60
+	},
+	{
+		"timestamp": "2021-04-25 19:47:08Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 3
+	},
+	{
+		"timestamp": "2021-04-25 19:47:08Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:09Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 61
+	},
+	{
+		"timestamp": "2021-04-25 19:47:09Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 3
+	},
+	{
+		"timestamp": "2021-04-25 19:47:09Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 16
+	},
+	{
+		"timestamp": "2021-04-25 19:47:10Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 426
+	},
+	{
+		"timestamp": "2021-04-25 19:47:10Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 308
+	},
+	{
+		"timestamp": "2021-04-25 19:47:10Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 12
+	},
+	{
+		"timestamp": "2021-04-25 19:47:11Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 833
+	},
+	{
+		"timestamp": "2021-04-25 19:47:11Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 716
+	},
+	{
+		"timestamp": "2021-04-25 19:47:11Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 26
+	},
+	{
+		"timestamp": "2021-04-25 19:47:12Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1138
+	},
+	{
+		"timestamp": "2021-04-25 19:47:12Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 847
+	},
+	{
+		"timestamp": "2021-04-25 19:47:12Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 16
+	},
+	{
+		"timestamp": "2021-04-25 19:47:12Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1464
+	},
+	{
+		"timestamp": "2021-04-25 19:47:12Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1144
+	},
+	{
+		"timestamp": "2021-04-25 19:47:12Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:13Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1464
+	},
+	{
+		"timestamp": "2021-04-25 19:47:13Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1144
+	},
+	{
+		"timestamp": "2021-04-25 19:47:13Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:15Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1464
+	},
+	{
+		"timestamp": "2021-04-25 19:47:15Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1144
+	},
+	{
+		"timestamp": "2021-04-25 19:47:15Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:15Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1464
+	},
+	{
+		"timestamp": "2021-04-25 19:47:15Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1144
+	},
+	{
+		"timestamp": "2021-04-25 19:47:15Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:17Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1464
+	},
+	{
+		"timestamp": "2021-04-25 19:47:17Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1144
+	},
+	{
+		"timestamp": "2021-04-25 19:47:17Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 9
+	},
+	{
+		"timestamp": "2021-04-25 19:47:18Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1790
+	},
+	{
+		"timestamp": "2021-04-25 19:47:18Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1472
+	},
+	{
+		"timestamp": "2021-04-25 19:47:18Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 37
+	},
+	{
+		"timestamp": "2021-04-25 19:47:18Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 2064
+	},
+	{
+		"timestamp": "2021-04-25 19:47:18Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1580
+	},
+	{
+		"timestamp": "2021-04-25 19:47:18Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 35
+	},
+	{
+		"timestamp": "2021-04-25 19:47:20Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1264
+	},
+	{
+		"timestamp": "2021-04-25 19:47:20Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 591
+	},
+	{
+		"timestamp": "2021-04-25 19:47:20Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 21
+	},
+	{
+		"timestamp": "2021-04-25 19:47:21Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1627
+	},
+	{
+		"timestamp": "2021-04-25 19:47:21Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 861
+	},
+	{
+		"timestamp": "2021-04-25 19:47:21Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 8
+	},
+	{
+		"timestamp": "2021-04-25 19:47:22Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1673
+	},
+	{
+		"timestamp": "2021-04-25 19:47:22Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1148
+	},
+	{
+		"timestamp": "2021-04-25 19:47:22Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:22Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1673
+	},
+	{
+		"timestamp": "2021-04-25 19:47:22Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1148
+	},
+	{
+		"timestamp": "2021-04-25 19:47:22Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:23Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1673
+	},
+	{
+		"timestamp": "2021-04-25 19:47:23Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1148
+	},
+	{
+		"timestamp": "2021-04-25 19:47:23Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:25Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1673
+	},
+	{
+		"timestamp": "2021-04-25 19:47:25Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1148
+	},
+	{
+		"timestamp": "2021-04-25 19:47:25Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:25Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1673
+	},
+	{
+		"timestamp": "2021-04-25 19:47:25Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1148
+	},
+	{
+		"timestamp": "2021-04-25 19:47:25Z",
+		"provider": "System.Runtime",
+		"name": "CPU Usage (%)",
+		"counterType": "Metric",
+		"value": 0
+	},
+	{
+		"timestamp": "2021-04-25 19:47:25Z",
+		"provider": "System.Runtime",
+		"name": "Working Set (MB)",
+		"counterType": "Metric",
+		"value": 1673
+	},
+	{
+		"timestamp": "2021-04-25 19:47:25Z",
+		"provider": "System.Runtime",
+		"name": "GC Heap Size (MB)",
+		"counterType": "Metric",
+		"value": 1148
+	}]
+}

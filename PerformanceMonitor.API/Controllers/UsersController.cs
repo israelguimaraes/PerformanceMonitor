@@ -40,7 +40,7 @@ namespace PerformanceMonitor.API.Controllers
             DotnetMonitor.InitializeCollector();
 
             var time = Stopwatch.StartNew();
-            var users = _userRepository.GetAll(Count).Result;
+            var users = await _userRepository.GetAll(Count);
             var dtos = Map(users);
             time.Stop();
 

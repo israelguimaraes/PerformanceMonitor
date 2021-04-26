@@ -6,7 +6,25 @@ namespace PerformanceMonitor.Console.Manual
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var dateText = "2021-04-25 19:47:04Z";
+
+            try
+            {
+                var result = DateTime.Parse(dateText);
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
