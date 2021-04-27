@@ -24,5 +24,6 @@ namespace PerformanceMonitor.Web.Models.DotnetCounters
 
         public bool IsCpuUsage => Name == CpuUsage;
         public bool IsWorkingSet => Name == WorkingSetMB;
+        public bool IsGcHeapSize => Name == GcHeapSize;
     }
 }

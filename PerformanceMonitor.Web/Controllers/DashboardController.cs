@@ -5,7 +5,6 @@ using PerformanceMonitor.Web.Utils;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace PerformanceMonitor.Web.Controllers
 {
@@ -14,14 +13,15 @@ namespace PerformanceMonitor.Web.Controllers
     public class DashboardController : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> GetReportData()
+        public IActionResult GetReportData()
         {
             var collectResult = GetCollectResult();
 
             var cpu = GetCpuUsage(collectResult);
-            var workingSet = GetMemoryUsage(collectResult);
+            var workingSet = GetWorkingSet(collectResult);
+            var gcHeapSize = GetGcHeapSize(collectResult);
 
-            return Ok(new { cpu, workingSet });
+            return Ok(new { cpu, workingSet, gcHeapSize });
         }
 
         private CollectResult GetCollectResult()
@@ -36,10 +36,10 @@ namespace PerformanceMonitor.Web.Controllers
             return collectResult;
         }
 
-        private ICollection<WorkingSet> GetMemoryUsage(CollectResult collectResult)
+        private ICollection<WorkingSet> GetWorkingSet(CollectResult collectResult)
         {
             var groupedByTimestamp = collectResult.Events
-               .Where(e => e.IsCpuUsage)
+               .Where(e => e.IsWorkingSet)
                .GroupBy(g => g.Timestamp)
                .ToList();
 
@@ -65,6 +65,23 @@ namespace PerformanceMonitor.Web.Controllers
             {
                 foreach (var @event in item)
                     result.Add(new CpuUsage { Percentage = @event.Value, Timestamp = @event.Timestamp });
+            }
+
+            return result;
+        }
+
+        private ICollection<GcHeapSize> GetGcHeapSize(CollectResult collectResult)
+        {
+            var groupedByTimestamp = collectResult.Events
+                .Where(e => e.IsGcHeapSize)
+                .GroupBy(g => g.Timestamp)
+                .ToList();
+
+            var result = new List<GcHeapSize>();
+            foreach (var item in groupedByTimestamp)
+            {
+                foreach (var @event in item)
+                    result.Add(new GcHeapSize { Mb = @event.Value, Timestamp = @event.Timestamp });
             }
 
             return result;
